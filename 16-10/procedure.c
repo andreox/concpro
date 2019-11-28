@@ -73,7 +73,7 @@ void consulta( MonitorBuffer *b ) {
 
 		b->num_lettori++ ;
 
-	pthread_mutex_lock( &(b->mutex) ) ;
+	pthread_mutex_unlock( &(b->mutex) ) ;
 
 	printf("A : %d \t B : %d\n", b->buffer.a , b->buffer.b ) ;
 	printf("A+B : %d\n", ( b->buffer.a ) + ( b->buffer.b ) ) ;

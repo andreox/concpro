@@ -77,13 +77,16 @@ void * generatore( void * v ) {
 	Monitors * vet = (Monitors*) v ;
 
 	elemento e ;
-	e.a = rand()%11 ;
-	e.b = rand()%11 ;
-
-	printf("Genero : %d %d\n", e.a, e.b) ;
+	
 	int j ;
-	for ( j = 0 ; j < 10 ; j++ )
+	for ( j = 0 ; j < 10 ; j++ ) {
+
+		e.a = rand() % 11 ;
+		e.b = rand() % 11 ;
+		printf("Genero : %d %d\n",e.a,e.b) ;
 		genera( vet->v , e) ;
+
+	}
 
 	pthread_exit(NULL) ;
 
